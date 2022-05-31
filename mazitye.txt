@@ -1,0 +1,58 @@
+is about second hand clothes.
+features
+	_> authentication % authorization
+	_> messaging
+	_> crud functionality
+	_> testing
+	_> search & filter functionality
+
+types_of_users
+	_> superUser
+	_> regular users
+	
+	_> superUsers => crud on products
+					 manage regular users
+
+	_> regular users => browser products
+							message the superuser
+							update their profiles
+
+
+controllers
+	homecontroller
+   		methods => index, about, contact
+	ShopController
+		methods => listofproducts, productdetail, search
+	dashboardController
+		methods => CRUD product, dashboard, manageUsers, manageProducts
+	MessagingController
+		methods => messaging
+	RegularUserController
+		methods => viewprofile, updateprofile
+
+Models
+	product
+		id = int
+		info = string
+		name = string
+		quality = string
+		price = decimal
+		picture = ?
+		date-updated = date
+	User
+		id = int
+		name = string
+		email = string
+		phone = string
+		location = string
+		picture = ?
+
+
+
+
+
+
+
+
+
+

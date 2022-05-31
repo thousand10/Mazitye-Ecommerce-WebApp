@@ -1,0 +1,41 @@
+@model IEnumerable<mazitye.Models.Product>
+
+@{
+
+}
+
+
+<div class="container mx-auto max-w-4xl pt-20  pb-48 px-10">
+    <h1 class="fonts-serif text-3xl pb-8 text-center underline">Mzitye_clothing Admin</h1>
+    <div class="flex justify-around items-center pb-7">
+        <h1 class="font-sans text-2xl">@Model.Count() Items Available</h1>
+        <a asp-controller="Admin" asp-action="CreateProduct" class="font-sans underline text-2xl">Add new product</a>
+    </div>
+    <table class="table-fixed w-full text-center">
+        <thead class="">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td class="border-2 border-gray-500 py-2 px-2 underline">
+                    <a asp-controller="Admin" asp-route-Id="@item.Id" asp-action="ViewSingleProduct">@item.Name</a>
+                </td>
+                <td class="border-2 border-gray-500 py-2 px-2">@item.Price</td>
+                <td  class="border-2 border-gray-500 py-2 px-2 bg-green-700 text-white">
+                    <a asp-controller="Admin" asp-route-Id="@item.Id" asp-action="UpdateSingleProduct">Update</a>
+                </td>
+                <td  class="border-2 border-gray-500 py-2 px-2 bg-red-700 text-white">
+                    <a asp-controller="Admin" asp-route-Id="@item.Id" asp-action="DeleteAProduct">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

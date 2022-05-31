@@ -1,0 +1,32 @@
+@model mazitye.Models.Product;
+
+ <div class="container mx-auto max-w-2xl py-20 px-10">
+      <h1 class="fonts-serif text-3xl">Create a new Product</h1>
+      <div class="pb-6">
+        <a asp-controller="Admin" asp-action="AdminPanel" class="font-sans text-xl underline">Return to panel</a>
+      </div>
+      <form asp-action="CreateProduct" method="post">
+        <div class="text-red-600" asp-validation-summary="ModelOnly"></div>
+          <div class="py-2">
+              <label asp-for="Name"></label>
+              <input asp-for="Name" type="text" class="w-full py-2 border-2 px-5 border-gray-400">
+              <span asp-validation-for="Name" class="text-red-500"></span>
+          </div>
+          <div class="py-2">
+            <label asp-for="Price">Price</label>
+            <input asp-for="Price" type="text" class="w-full py-2 border-2 px-5 border-gray-400">
+            <span asp-validation-for="Price" class="text-red-500"></span>
+        </div>
+        <div class="py-2">
+            <label for="">Image</label>
+            <input type="file" class="w-full py-2 border-2 px-5 border-gray-400">
+        </div>
+        <button type="submit" class="w-full py-3 bg-blue-600 text-white text-2xl">Add Product</button>
+      </form>
+    </div>
+
+@section Scripts{
+@{ <partial name="_ValidationScriptsPartial" /> }
+}
+
+

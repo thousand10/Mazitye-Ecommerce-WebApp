@@ -1,0 +1,23 @@
+@model mazitye.Models.Product
+
+
+<div class="container mx-auto max-w-2xl py-20 px-10">
+    <div class="pb-6">
+    <a asp-controller="Admin" asp-action="AdminPanel" class="font-sans text-xl underline">Return to panel</a>
+    </div>
+    <h1 class="fonts-serif text-3xl">Product-Details</h1>
+    <form>
+        <div class="py-2">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" type="text" disabled class="w-full py-2 border-2 px-5 border-gray-400">
+        </div>
+        <div class="py-2">
+        <label asp-for="Price">Price</label>
+        <input asp-for="Price" type="text" disabled class="w-full py-2 border-2 px-5 border-gray-400">
+    </div>
+    <div class="py-2">
+        <label for="">Image</label>
+        <img src="/mgs/first.jpg" alt="">
+    </div>
+    </form>
+</div>

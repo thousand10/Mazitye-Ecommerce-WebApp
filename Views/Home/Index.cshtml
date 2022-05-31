@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="showcasing container mx-auto max-w-6xl py-20 px-10">
+        <div class="flex flex-col text-center">
+            <h1 class="font-serif text-5xl font-bold tracking-wide pb-6">Mzitye is a <span class="text-red-400">cool</span>  clothing shop</h1>
+            <p class="font-sans text-lg max-w-2xl mx-auto pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sint repudiandae doloremque esse harum quidem ab aliquid, porro quos vitae!</p>
+            <div class="flex gap-3 mx-auto">
+                <a asp-controller="Shop" asp-action="ListOfProducts" class="font-sans text-xl py-2 px-10 bg-red-600 text-white transition ease-in-out duration-150 hover:bg-red-700">Shop</a>
+                <a asp-controller="Home" asp-action="Contact" class="font-sans text-xl py-2 px-10 bg-red-600 text-white transition ease-in-out duration-150 hover:bg-red-700">Contact</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- why mazitye -->
+    <div class="why bg-gray-600">
+        <div class="container mx-auto max-w-6xl py-10 px-10">
+            <h1 class="text-3xl font-serif text-center text-white pb-6">Why Mzitye?</h1>
+            <div class="grid grid-cols-3 gap-5">
+                <div class="flex flex-col items-center px-5 py-10">
+                    <h1 class="font-sans text-red-400 text-2xl font-bold pb-3">Stability</h1>
+                    <p class="font-sans text-xl text-gray-300">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam perferendis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum iure temporibus sit! cum amet?
+                    </p>
+                </div>
+                <div class="flex flex-col items-center px-5 py-10">
+                    <h1 class="font-sans text-red-400 text-2xl font-bold pb-3">Trustworthy</h1>
+                    <p class="font-sans text-xl text-gray-300">
+                        Lorem ipsum dolor, sit amet consectetur  Laboriosam perferendis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum iure temporibus sit! cum amet?
+                    </p>
+                </div>
+                <div class="flex flex-col items-center px-5 py-10">
+                    <h1 class="font-sans text-red-400 text-2xl font-bold pb-3">Fast&Safe</h1>
+                    <p class="font-sans text-xl text-gray-300">
+                        Lorem ipsum dolor, sit amet consectetur Lorem, ipsum dolor. elit. Laboriosam perferendis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum iure temporibus sit! cum amet?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- visit shop -->
+    <div class="bg-red-400">
+        <div class="container mx-auto max-w-6xl py-20 px-10">
+            <h1 class="text-center font-serif text-3xl pb-10 text-gray-800">Why waiting bafo?</h1>
+            <div class="text-center">
+                <a asp-controller="Shop" asp-action="ListOfProducts" class="font-sans text-xl transition ease-in-out duration-150  hover:bg-black hover:text-red-400 py-3 px-12 bg-red-700  shadow-xl text-white">Visit the Shop</a>
+            </div>
+        </div>
+    </div>

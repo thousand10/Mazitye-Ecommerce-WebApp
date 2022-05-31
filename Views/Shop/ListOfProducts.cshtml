@@ -1,0 +1,37 @@
+@model IEnumerable<mazitye.Models.Product>
+
+
+<div class="container mx-auto max-w-6xl py-20 px-10">
+        <div class="grid grid-cols-2 pb-16">
+            <h1 class=" font-serif text-3xl font-bold ">@Model.Count() items Available</h1>
+            <input type="text" placeholder="Search item.." class="w-full py-2 px-4 font-sans text-xl border-2 border-red-600">
+        </div>
+
+
+        @if (Model.Count() >= 1)
+        {
+        <div class="grid grid-cols-3 gap-10">
+            @foreach (var item in Model)
+            {
+                <div class=""> 
+                    <img src="/mgs/first.jpg" alt="">
+                    <div class="py-6 px-2">
+                        <h1 class="font-sans text-2xl pb-3">@item.Name</h1>
+                        <h1 class="font-sans text-xl pb-2">$@item.Price</h1>
+                        <p class="font-sans text-xl pb-3">Quantity: 10</p>
+                        <div class="grid gap-2 grid-cols-2">
+                            <a   class="font-sans shadow-xl text-gray-200 text-xl bg-red-500 py-2 px-10 transition ease-in-out duration-150 hover:bg-red-600">Cart</a>
+                            <a asp-controller="Shop" asp-route-Id="@item.Id" asp-action="ProductDetails" class="font-sans shadow-xl text-gray-200 text-xl bg-red-500 py-2 px-10 transition ease-in-out duration-150 hover:bg-red-600">Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <h1 class="font-serif py-48 text-4xl text-red-400 font-bold">oops the shop is empyt!</h1>
+    }
+
+    </div>
+</div>

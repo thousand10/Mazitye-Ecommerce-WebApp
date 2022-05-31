@@ -1,0 +1,23 @@
+@model mazitye.Models.Product
+
+
+<div class="container mx-auto max-w-3xl pt-20 pb-48 px-10">
+   <div class="pb-7">
+    <a asp-controller="Shop" asp-action="ListOfProducts" class="font-sans text-xl underline">Return to shop</a>
+  </div>
+    <h1 class="font-sans text-3xl pb-5 underline"><span class="text-red-700">@Model.Name</span> Product Details</h1>
+    <div class="grid grid-cols-2 pb-7">
+        <div class="">
+            <img src="/mgs/first.jpg" alt="">
+        </div>
+        <div class="pl-6 py-3">
+            <h1 class="font-serif text-xl pb-3">Name: @Model.Name</h1>
+            <h1 class="font-serif text-xl pb-3">Price: @Model.Price</h1>
+            <h1 class="font-serif text-xl pb-3">Quantity: 10</h1>
+        </div>
+    </div>
+    <div class="flex gap-6 items-center ">
+        <a href="#" id="cart" class="font-sans shadow-xl text-gray-200 text-xl bg-red-500 py-2 px-10 transition ease-in-out duration-150 hover:bg-red-600">Add To Cart</a>
+        <a asp-action="Messaging" asp-controller="Messaging" class="font-sans shadow-xl text-gray-200 text-xl bg-gray-900 py-2 px-10 transition ease-in-out duration-150 hover:bg-red-600">Message Seller</a>
+    </div>
+</div>

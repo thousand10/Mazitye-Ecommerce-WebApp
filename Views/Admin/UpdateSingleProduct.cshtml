@@ -1,0 +1,30 @@
+@model mazitye.Models.Product;    
+    
+@{
+
+} 
+    
+<div class="container mx-auto max-w-2xl py-20 px-10">
+  <h1 class="fonts-serif text-3xl">Update Product</h1>
+  <div>
+    <a asp-controller="Admin" asp-action="AdminPanel" class="font-sans text-xl underline">Return to panel</a>
+  </div>
+  <form asp-action="UpdateSingleProduct" method="post">
+    <div class="text-red-600" asp-validation-summary="All"></div>
+      <div class="py-2">
+          <label asp-for="Name">Name</label>
+          <input asp-for="Name" type="text" class="w-full py-2 border-2 px-5 border-gray-400">
+          <span asp-validation-for="Name" class="text-red-500"></span>
+      </div>
+      <div class="py-2">
+        <label asp-for="Price">Price</label>
+        <input asp-for="Price" type="text" class="w-full py-2 border-2 px-5 border-gray-400">
+        <span asp-validation-for="Price" class="text-red-500"></span>
+    </div>
+    <div class="py-2">
+        <label for="">Image</label>
+        <input type="file" class="w-full py-2 border-2 px-5 border-gray-400">
+    </div>
+    <button type="submit" class="w-full py-3 bg-blue-600 text-white text-2xl">Updatee Product</button>
+  </form>
+</div>
